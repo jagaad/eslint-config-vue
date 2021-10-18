@@ -1,24 +1,25 @@
 module.exports = {
   env: {
-    browser: true,
-    node: true,
-    'jest/globals': true
+    'browser': true,
+    'node': true,
+    'jest/globals': true,
   },
   plugins: ['@typescript-eslint', 'jest', 'unicorn', 'vue'],
   parserOptions: {
-    parser: '@typescript-eslint/parser'
+    parser: '@typescript-eslint/parser',
   },
   extends: [
     'standard',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'plugin:vue/vue3-recommended'
+    'plugin:vue/vue3-recommended',
+    'prettier',
   ],
   settings: {
     'import/resolver': {
-      node: { extensions: ['.js', '.mjs'] }
-    }
+      node: { extensions: ['.js', '.mjs'] },
+    },
   },
   rules: {
     /**********************/
@@ -52,8 +53,8 @@ module.exports = {
       'error',
       {
         destructuring: 'any',
-        ignoreReadBeforeAssign: false
-      }
+        ignoreReadBeforeAssign: false,
+      },
     ],
 
     // No single if in an "else" block
@@ -61,7 +62,7 @@ module.exports = {
 
     // Force curly braces for control flow,
     // including if blocks with a single statement
-    curly: ['error', 'all'],
+    'curly': ['error', 'all'],
 
     // No async function without await
     'require-await': 'error',
@@ -125,27 +126,27 @@ module.exports = {
     'vue/no-parsing-error': [
       'error',
       {
-        'x-invalid-end-tag': false
-      }
+        'x-invalid-end-tag': false,
+      },
     ],
 
     // Maximum 5 attributes per line instead of one
     'vue/max-attributes-per-line': [
       'error',
       {
-        singleline: 5
-      }
+        singleline: 5,
+      },
     ],
 
     '@typescript-eslint/no-unused-vars': [
       'error',
-      { args: 'all', argsIgnorePattern: '^_' }
+      { args: 'all', argsIgnorePattern: '^_' },
     ],
     // Per the docs, the root no-unused-vars should be disabled:
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
     'no-unused-vars': 'off',
 
     // https://github.com/typescript-eslint/typescript-eslint/blob/1cf9243/docs/getting-started/linting/FAQ.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
-    'no-undef': 'off'
-  }
+    'no-undef': 'off',
+  },
 }
