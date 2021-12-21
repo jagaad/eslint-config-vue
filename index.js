@@ -14,7 +14,6 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:vue/vue3-recommended',
-    'prettier',
   ],
   settings: {
     'import/resolver': {
