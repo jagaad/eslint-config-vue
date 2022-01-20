@@ -1,4 +1,5 @@
 # @jagaad/eslint-config-vue
 
-- package will be moved in a different repository
-- package was inspired by https://github.com/nuxt/eslint-config
+> Package was inspired by https://github.com/nuxt/eslint-config
+
+> TODO: Polish library and add README instructions
