@@ -1,33 +1,45 @@
 {
-  "name": "@jagaad/eslint-config-vue",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
-  },
-  "keywords": [],
-  "author": "Andrew Luca",
-  "license": "ISC",
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-jest": "^25.2.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-standard": "^5.0.0",
-    "eslint-plugin-unicorn": "^37.0.1",
-    "eslint-plugin-vue": "^7.19.1"
-  },
-  "peerDependencies": {
-    "eslint": "^7.32.0"
-  },
-  "devDependencies": {
-    "eslint": "^7.32.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@jagaad/eslint-config-vue",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 0",
+		"prepare": "husky install"
+	},
+	"keywords": [],
+	"author": "Andrew Luca",
+	"license": "ISC",
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^4.33.0",
+		"@typescript-eslint/parser": "^4.33.0",
+		"eslint-config-standard": "^16.0.3",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-jest": "^25.2.2",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^5.1.0",
+		"eslint-plugin-standard": "^5.0.0",
+		"eslint-plugin-unicorn": "^37.0.1",
+		"eslint-plugin-vue": "^7.19.1"
+	},
+	"peerDependencies": {
+		"eslint": "^7.32.0"
+	},
+	"devDependencies": {
+		"@jagaad/prettier-config": "^1.1.1",
+		"eslint": "^7.32.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.3.7",
+		"prettier": "^2.6.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"index.js"
+	],
+	"prettier": "@jagaad/prettier-config",
+	"lint-staged": {
+		"**/*": "npx prettier --ignore-path .gitignore --ignore-unknown --write"
+	}
 }
